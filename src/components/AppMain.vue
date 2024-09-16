@@ -11,15 +11,15 @@ export default {
 <template>
   <main>
     <div class="container">
-      <h1>
-        MAIN
-      </h1>
+      <h2> __> Content goes here <-- </h2>
     </div>
   </main>
 </template>
 
 <style scoped>
 main {
+  color: white;
   background-color: black;
+  padding: 4rem;
 }
 </style>
