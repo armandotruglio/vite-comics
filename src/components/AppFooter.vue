@@ -156,8 +156,18 @@ export default {
 
     <div class="bottom-footer">
 
+      <div class="container">
+        <div class="sign-up-button">
+          BOTTONE
+        </div>
+        <div class="socials">
+          ICONE SOCIAL
+        </div>
+      </div>
+
     </div>
   </footer>
+
 </template>
 
 <style scoped>
@@ -207,8 +217,15 @@ footer {
   }
 
   .bottom-footer {
-    min-height: 80px;
+    height: 80px;
     background-color: black;
+
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
 </style>
