@@ -148,8 +148,7 @@ export default {
         </div>
 
 
-        <div class="bg-logo">
-        </div>
+        <div class="bg-logo"></div>
 
       </div>
     </div>
@@ -157,12 +156,24 @@ export default {
     <div class="bottom-footer">
 
       <div class="container">
+
         <div class="sign-up-button">
-          BOTTONE
+          <a href="#">
+            <span>SIGN-UP NOW!</span>
+          </a>
         </div>
+
         <div class="socials">
-          ICONE SOCIAL
+          <span>FOLLOW US</span>
+          <div class="icons">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+          </div>
         </div>
+
       </div>
 
     </div>
@@ -220,11 +231,33 @@ footer {
     height: 80px;
     background-color: black;
 
+    a {
+      color: white;
+      border: 1px solid #0a7cec;
+      padding: 1rem;
+    }
+
     .container {
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .socials {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        span {
+          color: #0a7cec;
+          font-weight: bolder;
+        }
+
+        .icons img {
+          margin-right: 1rem;
+        }
+      }
+
     }
   }
 }
