@@ -167,10 +167,10 @@ export default {
           <span>FOLLOW US</span>
           <div class="icons">
             <img src="../assets/img/footer-facebook.png" alt="Facebook">
-            <img src="../assets/img/footer-facebook.png" alt="Facebook">
-            <img src="../assets/img/footer-facebook.png" alt="Facebook">
-            <img src="../assets/img/footer-facebook.png" alt="Facebook">
-            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-twitter.png" alt="Twitter">
+            <img src="../assets/img/footer-youtube.png" alt="Youtube">
+            <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
+            <img src="../assets/img/footer-periscope.png" alt="Periscope">
           </div>
         </div>
 
