@@ -53,7 +53,8 @@ export default {
           href: '#',
           active: false
         },
-      ]
+      ],
+      currentActiveIndex: 1
     }
   }
 }
@@ -70,7 +71,8 @@ export default {
 
       <div class="links">
         <ul>
-          <li v-for="link in linkList">
+          <li v-for="(link, index) in linkList" :class="{ active: currentActiveIndex === index || link.active }"
+            @click="currentActiveIndex = index" @mouseover="link.active = true" @mouseleave="link.active = false">
             <a :href="link.href"> {{ link.text }} </a>
           </li>
         </ul>
@@ -102,6 +104,20 @@ export default {
       li {
         margin-right: 1rem;
         font-weight: bold;
+
+        &.active a {
+          color: #0a7cec;
+          position: relative;
+
+          &::after {
+            content: '';
+            border-bottom: 5px solid #0a7cec;
+            position: absolute;
+            width: 100%;
+            bottom: -50px;
+            left: 0;
+          }
+        }
       }
     }
   }

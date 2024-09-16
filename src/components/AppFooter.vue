@@ -166,11 +166,21 @@ export default {
         <div class="socials">
           <span>FOLLOW US</span>
           <div class="icons">
-            <img src="../assets/img/footer-facebook.png" alt="Facebook">
-            <img src="../assets/img/footer-twitter.png" alt="Twitter">
-            <img src="../assets/img/footer-youtube.png" alt="Youtube">
-            <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
-            <img src="../assets/img/footer-periscope.png" alt="Periscope">
+            <a href="#">
+              <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            </a>
+            <a href="#">
+              <img src="../assets/img/footer-twitter.png" alt="Twitter">
+            </a>
+            <a href="#">
+              <img src="../assets/img/footer-youtube.png" alt="Youtube">
+            </a>
+            <a href="#">
+              <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
+            </a>
+            <a href="#">
+              <img src="../assets/img/footer-periscope.png" alt="Periscope">
+            </a>
           </div>
         </div>
 
@@ -231,7 +241,7 @@ footer {
     height: 80px;
     background-color: black;
 
-    a {
+    .sign-up-button a {
       color: white;
       border: 1px solid #0a7cec;
       padding: 1rem;
@@ -253,7 +263,7 @@ footer {
           font-weight: bolder;
         }
 
-        .icons img {
+        .icons a {
           margin-right: 1rem;
         }
       }
