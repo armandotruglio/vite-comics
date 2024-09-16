@@ -2,7 +2,128 @@
 export default {
   data() {
     return {
-
+      linkLists: [
+        {
+          title: 'DC COMICS',
+          links: [
+            {
+              text: 'Characters',
+              href: '#',
+            },
+            {
+              text: 'Movies',
+              href: '#',
+            },
+            {
+              text: 'TV',
+              href: '#',
+            },
+            {
+              text: 'Games',
+              href: '#',
+            },
+            {
+              text: 'Videos',
+              href: '#',
+            },
+            {
+              text: 'News',
+              href: '#',
+            },
+            {
+              text: 'Characters',
+              href: '#',
+            }
+          ]
+        },
+        {
+          title: 'SHOP',
+          links: [
+            {
+              text: 'Shop DC',
+              href: '#',
+            },
+            {
+              text: 'Shop DC Collectibles',
+              href: '#',
+            }
+          ]
+        },
+        {
+          title: 'DC',
+          links: [
+            {
+              text: 'Terms Of Use',
+              href: '#',
+            },
+            {
+              text: 'Privacy policy (New)',
+              href: '#',
+            },
+            {
+              text: 'Ad Choices',
+              href: '#',
+            },
+            {
+              text: 'Advertising',
+              href: '#',
+            },
+            {
+              text: 'Jobs',
+              href: '#',
+            },
+            {
+              text: 'Subscriptions',
+              href: '#',
+            },
+            {
+              text: 'Talent Workshops',
+              href: '#',
+            },
+            {
+              text: 'CPSC Certificates',
+              href: '#',
+            },
+            {
+              text: 'Ratings',
+              href: '#',
+            },
+            {
+              text: 'Shop Help',
+              href: '#',
+            },
+            {
+              text: 'Contact Us',
+              href: '#',
+            }
+          ]
+        },
+        {
+          title: 'SITES',
+          links: [
+            {
+              text: 'DC',
+              href: '#',
+            },
+            {
+              text: 'MAD Magazine',
+              href: '#',
+            },
+            {
+              text: 'DC Kids',
+              href: '#',
+            },
+            {
+              text: 'DC Universe',
+              href: '#',
+            },
+            {
+              text: 'DC Power Visa',
+              href: '#',
+            }
+          ]
+        },
+      ]
     }
   }
 }
@@ -14,8 +135,19 @@ export default {
       <div class="container">
 
         <div class="links">
-          LINK DEL FOOTER
+          <div class="list" v-for="list in linkLists">
+            <h3>{{ list.title }}</h3>
+
+            <ul>
+              <li v-for="link in list.links">
+                <a :href="link.href">{{ link.text }}</a>
+              </li>
+            </ul>
+
+          </div>
         </div>
+
+
         <div class="bg-logo">
         </div>
 
@@ -45,11 +177,27 @@ footer {
 
       .links {
         padding: 2rem;
-        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .list {
+          margin-right: 2rem;
+
+          h3 {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        a {
+          color: gray;
+          font-size: 0.8rem;
+        }
       }
 
       .bg-logo {
-        flex-basis: 50%;
+        flex-basis: 40%;
         background-image: url("../assets/img/dc-logo-bg.png");
         background-position: center;
         background-size: cover;
