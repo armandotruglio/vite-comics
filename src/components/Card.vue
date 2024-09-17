@@ -18,18 +18,32 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <img :src=imgUrl :alt=comicTitle>
+    <div class="card">
+        <figure>
+            <img :src=imgUrl :alt=comicTitle>
+        </figure>
         <h3>{{ comicTitle }}</h3>
     </div>
 </template>
 
-<style scoped>
-.container {
-    max-width: 15%;
+<style lang="scss" scoped>
+.card {
+    flex-basis: calc(100%/6 - 30px);
 
-    img {
-        width: 100%;
+    figure {
+        height: 180px;
+        overflow-y: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h3 {
+        font-size: 0.8rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+        margin-top: 1rem;
     }
 }
 </style>

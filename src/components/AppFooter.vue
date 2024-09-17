@@ -239,7 +239,7 @@ footer {
 
   .bottom-footer {
     height: 80px;
-    background-color: black;
+    background-color: #303030;
 
     .sign-up-button a {
       color: white;
