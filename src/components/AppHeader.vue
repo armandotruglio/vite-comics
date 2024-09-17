@@ -71,8 +71,8 @@ export default {
 
       <div class="links">
         <ul>
-          <li v-for="(link, index) in linkList" :class="{ active: currentActiveIndex === index || link.active }"
-            @click="currentActiveIndex = index" @mouseover="link.active = true" @mouseleave="link.active = false">
+          <li v-for="(link, index) in linkList" :class="{ active: currentActiveIndex === index }"
+            @click="currentActiveIndex = index">
             <a :href="link.href"> {{ link.text }} </a>
           </li>
         </ul>
@@ -89,7 +89,6 @@ export default {
   padding: 1rem;
 
   .logo {
-
     img {
       height: 80px;
     }
@@ -104,10 +103,11 @@ export default {
       li {
         margin-right: 1rem;
         font-weight: bold;
+        position: relative;
 
+        &:hover a,
         &.active a {
           color: #0a7cec;
-          position: relative;
 
           &::after {
             content: '';

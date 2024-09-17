@@ -1,9 +1,15 @@
 <script>
+import UserData from "../../dc-comics.json";
+import Card from "./Card.vue"
+
 export default {
   data() {
     return {
-
+      comics: UserData,
     }
+  },
+  components: {
+    Card,
   }
 }
 </script>
@@ -11,7 +17,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <h2> __> Content goes here <-- </h2>
+      <Card v-for="(comic, index) in comics" :key="index" :imgUrl="comic.thumb" :comicTitle="comic.series" />
     </div>
   </main>
 </template>
@@ -21,5 +27,10 @@ main {
   color: white;
   background-color: black;
   padding: 4rem;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 </style>
